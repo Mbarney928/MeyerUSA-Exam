@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>MeyerUSA - Application Confirmation Page</title>
+  </head>
+  <body>
+    <main class="confirm container">
+        <!-- MESSAGE -->
+        <div class="jumbotron">
+            <h1>Congratulations, <span class="applicants-name"></span>!</h1>
+            <h2>You have successfully submitted your application.</h2>
+            <p class="lead">
+                <small>Please allow 5-7 business days for application review.</small>
+            </p>
+        </div>
+
+        <!-- TOGGLE FORM DATA -->
+        <p>
+            <button class="btn btn-submit" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                Toggle Form Data
+            </button>
+
+            <a href="http://localhost:3000" class="btn btn-submit">Go to Job Application Form</a>
+        </p>
+
+        <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+                <h4>Form data (Only display First Name - Cell Phone)</h4>
+                <div>
+                    <span class="font-weight-bold">First Name:</span> <span class="first-name"></span>
+                </div>
+
+                <div>
+                    <span class="font-weight-bold">Middle Name:</span> <span class="middle-name"></span>
+                </div>
+    
+                <div>
+                    <span class="font-weight-bold">Last Name:</span> <span class="last-name"></span>
+                </div>
+
+                <div>
+                    <span class="font-weight-bold">Email:</span> <span class="email"></span>
+                </div>
+
+                <div>
+                    <span class="font-weight-bold">Cell Phone:</span> <span class="cell-phone"></span>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+    <script>
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+
+            name = name.replace(/[\[\]]/g, '\\$&');
+
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+
+            if (!results) return null;
+            if (!results[2]) return '';
+
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+    
+        var firstName = getParameterByName('firstName');
+        var middleName = getParameterByName('middleName');
+        var lastName = getParameterByName('lastName');
+        var email = getParameterByName('email');
+        var cellPhone = getParameterByName('cellPhone');
+        
+        document.querySelector(".applicants-name").innerHTML = firstName;
+        document.querySelector(".first-name").innerHTML = firstName;
+        document.querySelector(".middle-name").innerHTML = middleName;
+        document.querySelector(".last-name").innerHTML = lastName;
+        document.querySelector(".email").innerHTML = email;
+        document.querySelector(".cell-phone").innerHTML = cellPhone;
+    </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

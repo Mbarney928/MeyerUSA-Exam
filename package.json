@@ -1,0 +1,16 @@
+{
+  "name": "meyerusa",
+  "version": "1.0.0",
+  "description": "Job Application Form with validation and confirmation message on successful submission.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Maegan Barney",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2"
+  }
+}

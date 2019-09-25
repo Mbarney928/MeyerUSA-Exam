@@ -1,0 +1,85 @@
+// Variables //
+
+// Colors
+$meyer-blue: #085a7e;
+$meyer-orange: #ff8800;
+$color-white: #fff;
+
+
+
+body {
+    color: #333;
+}
+
+.container {
+    margin-top: 1rem;
+    border: 1px #eee solid;
+    border-radius: 3px;
+
+    label, input {
+        color: $meyer-blue;
+    }
+
+    figure {
+        margin-right: 2rem;
+       img {
+            width: 155px;
+
+            // Medium devices (tablets, 768px and up)
+            @media (min-width: 768px) {
+                width: 175px;
+            }
+       }
+   }
+
+    h1, h2, h3, h4, h5, h6 {
+        color: $meyer-orange;
+    }
+
+    .state-dept {
+        color: $meyer-blue;
+    }
+
+    hr {
+        background-color: #ced4da;
+    }
+
+    .terms-and-conditions {
+        margin-top: 2rem;
+    }
+
+    .btn-submit {
+        background: $meyer-blue;
+        color: $color-white;
+    }
+
+    footer {
+        margin-top: 4rem;
+    }
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) {
+        padding: 2rem 4rem;
+    }
+}
+
+.confirm {
+    &.container {
+        background-color: #fff;
+        border: none;
+    }
+
+    .jumbotron {
+        border: solid $meyer-blue 4px;
+        background-color: #fff;
+        color: $meyer-blue;
+
+        h2 {
+            color: $meyer-blue;
+        }
+
+        .lead {
+            color: $meyer-orange;
+        }
+    }
+}

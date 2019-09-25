@@ -1,0 +1,45 @@
+body {
+  color: #333; }
+
+.container {
+  margin-top: 1rem;
+  border: 1px #eee solid;
+  border-radius: 3px; }
+  .container label, .container input {
+    color: #085a7e; }
+  .container figure {
+    margin-right: 2rem; }
+    .container figure img {
+      width: 155px; }
+      @media (min-width: 768px) {
+        .container figure img {
+          width: 175px; } }
+  .container h1, .container h2, .container h3, .container h4, .container h5, .container h6 {
+    color: #ff8800; }
+  .container .state-dept {
+    color: #085a7e; }
+  .container hr {
+    background-color: #ced4da; }
+  .container .terms-and-conditions {
+    margin-top: 2rem; }
+  .container .btn-submit {
+    background: #085a7e;
+    color: #fff; }
+  .container footer {
+    margin-top: 4rem; }
+  @media (min-width: 768px) {
+    .container {
+      padding: 2rem 4rem; } }
+
+.confirm.container {
+  background-color: #fff;
+  border: none; }
+
+.confirm .jumbotron {
+  border: solid #085a7e 4px;
+  background-color: #fff;
+  color: #085a7e; }
+  .confirm .jumbotron h2 {
+    color: #085a7e; }
+  .confirm .jumbotron .lead {
+    color: #ff8800; }
